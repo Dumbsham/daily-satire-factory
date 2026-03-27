@@ -1,203 +1,259 @@
-Here’s a **clean, aesthetic, “wow” GitHub README** with badges, emojis, structure, and a professional vibe 👇
+<div align="center">
 
----
+<br/>
 
-# 🚀 DailySatire.AI
-
-### 🧠 Agentic AI Comic & Story Generator
-
-<p align="center">
-  <img src="https://img.shields.io/badge/AI-Agentic-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Next.js-Frontend-black?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/TypeScript-React-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Gemini-Powered-orange?style=for-the-badge" />
-</p>
-
----
-
-## ✨ Overview
-
-**COMIC-AI** is a full-stack, agent-driven AI application that transforms **real-world news into engaging comic stories** using intelligent agents, text generation, and image synthesis.
-
-> ⚡ From breaking news → story → panels → comic
-> All automated using AI agents.
-
----
-
-## 🧩 Features
-
-🔥 **Agentic Architecture**
-
-* Multi-agent pipeline (News → Story → Image → Comic)
-
-📰 **Live News Processing**
-
-* Fetches trending/global news dynamically
-
-🎭 **Story Generation**
-
-* Converts news into engaging narratives
-
-🎨 **AI Image Generation**
-
-* Creates comic-style visuals for each panel
-
-🧵 **Comic Stitching**
-
-* Automatically assembles panels into a final comic
-
-🌐 **Full Stack App**
-
-* FastAPI backend + Next.js frontend
-
----
-
-## 🏗️ Project Structure
-
-```bash
-COMIC-AI/
-│
-├── 🔧 Backend/
-│   ├── api.py
-│   ├── main.py
-│   ├── requirements.txt
-│   ├── agents/        # 🧠 AI agents
-│   ├── utils/         # ⚙️ Helper functions
-│   └── output/        # 🖼️ Generated comics
-│
-└── 🎨 Frontend/
-    └── comic-frontend/
-        ├── app/           # Pages & routing
-        ├── components/    # UI components
-        ├── lib/           # Utilities
-        ├── models/        # DB models
-        ├── public/        # Assets
-        └── package.json
+```
+██████╗  █████╗ ██╗██╗  ██╗   ██╗███████╗ █████╗ ████████╗██╗██████╗ ███████╗   █████╗ ██╗
+██╔══██╗██╔══██╗██║██║  ╚██╗ ██╔╝██╔════╝██╔══██╗╚══██╔══╝██║██╔══██╗██╔════╝  ██╔══██╗██║
+██║  ██║███████║██║██║   ╚████╔╝ ███████╗███████║   ██║   ██║██████╔╝█████╗    ███████║██║
+██║  ██║██╔══██║██║██║    ╚██╔╝  ╚════██║██╔══██║   ██║   ██║██╔══██╗██╔══╝    ██╔══██║██║
+██████╔╝██║  ██║██║███████╗██║   ███████║██║  ██║   ██║   ██║██║  ██║███████╗  ██║  ██║██║
+╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝╚═╝  ╚═╝╚══════╝  ╚═╝  ╚═╝
 ```
 
+### 🗞️ Live Indian Political News &nbsp;→&nbsp; ✍️ Hinglish Satire &nbsp;→&nbsp; 🎨 AI Comic &nbsp;— **Fully Autonomous**
+
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🔴%20Live%20Demo-Click%20Here-FF4500?style=for-the-badge&labelColor=1a1a1a)](YOUR_LIVE_LINK_HERE)
+&nbsp;
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️%20in%20India-FF6B6B?style=for-the-badge&labelColor=1a1a1a)](https://github.com/YOUR_GITHUB_USERNAME)
+
+<br/>
+
+</div>
+
 ---
 
-## ⚙️ Backend Setup (FastAPI)
+## 🧠 What Makes This Different From "Just Another AI Project"
+
+Most AI projects = one API call + display result. **DailySatire.ai is not that.**
+
+This is a **true multi-agent orchestration system** — four specialized AI agents collaborate in a pipeline, each with a distinct role, passing structured outputs down the chain to produce something no single model call could achieve alone.
+
+> **The insight:** Real-world AI engineering isn't about prompting — it's about *orchestrating* models, managing state, handling failures, and delivering results reliably at scale. This project demonstrates exactly that.
+
+<br/>
+
+## 🏗️ System Architecture
+
+```
+                        ┌─────────────────────────────────────────────────────┐
+                        │                 USER REQUEST                        │
+                        │            (Clerk Auth Token)                       │
+                        └──────────────────────┬──────────────────────────────┘
+                                               │
+                                               ▼
+                        ┌─────────────────────────────────────────────────────┐
+                        │              FASTAPI ORCHESTRATOR                   │
+                        │         Rate Limit Check → MongoDB                  │
+                        │           (5 comics / user / day)                   │
+                        └──────────┬───────────────────────────────────────────┘
+                                   │
+               ┌───────────────────┼───────────────────────────┐
+               │                   │                           │
+               ▼                   ▼                           ▼
+     ┌──────────────┐    ┌──────────────────┐      ┌─────────────────┐
+     │  🕵️ SCOUT    │ →  │  ✍️ EDITOR        │ →   │ 🎨 ILLUSTRATOR  │
+     │              │    │                  │      │                 │
+     │  Fetches     │    │  Converts news   │      │  Generates a    │
+     │  trending    │    │  → punchy        │      │  comic-style    │
+     │  Indian      │    │  Hinglish        │      │  image via      │
+     │  political   │    │  satire via      │      │  Hugging Face   │
+     │  news        │    │  Gemini LLM      │      │  Diffusion      │
+     └──────────────┘    └──────────────────┘      └─────────────────┘
+                                                            │
+                                                            ▼
+                                              ┌─────────────────────────┐
+                                              │    🖨️ PUBLISHER          │
+                                              │                         │
+                                              │  Overlays satire text   │
+                                              │  onto image → final     │
+                                              │  comic panel returned   │
+                                              └─────────────────────────┘
+```
+
+<br/>
+
+## ⚙️ Tech Stack
+
+<div align="center">
+
+| Layer | Technology | Why |
+|---|---|---|
+| **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js) + Turbopack | Blazing-fast dev builds, App Router |
+| **Auth** | ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=flat-square&logo=clerk&logoColor=white) | Production-grade auth (Google + Email) in minutes |
+| **Animations** | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white) | Fluid, physics-based UI transitions |
+| **Backend** | ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) | Async Python API, auto-generated Swagger docs |
+| **LLM (Satire)** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white) | State-of-the-art language model for Hinglish generation |
+| **Image Gen** | ![Hugging Face](https://img.shields.io/badge/Hugging_Face_Diffusion-FFD21E?style=flat-square&logo=huggingface&logoColor=black) | Open-source diffusion models for comic-style art |
+| **Database** | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) | Flexible document store for usage tracking + history |
+
+
+</div>
+
+<br/>
+
+## 🤖 The Four Agents — Deep Dive
+
+### 🕵️ Agent 1: Scout
+Monitors live news sources and surfaces the most trending Indian political stories. Implements deduplication so the same story never gets satirized twice.
+
+### ✍️ Agent 2: Editor  
+Takes raw news headlines and context → feeds them to **Google Gemini** with a carefully engineered prompt → produces punchy, culturally authentic Hinglish satire. This isn't just "translate to Hindi" — it writes *jokes*, with setup, punchline, and political bite.
+
+### 🎨 Agent 3: Illustrator  
+Takes the satirical narrative and generates a comic-style illustration using **Hugging Face diffusion models**. Prompt engineering here is critical — the agent constructs image prompts that match the comic aesthetic, not just the news topic.
+
+### 🖨️ Agent 4: Publisher  
+Composites the satire text onto the generated image, handles typography, panel layout, and returns a finished comic — ready to share.
+
+<br/>
+
+## 📊 Key Engineering Decisions
+
+```python
+# Why MongoDB for rate limiting instead of Redis?
+# → Zero additional infra. MongoDB TTL indexes auto-expire daily counts.
+# → Same DB used for comic history = fewer moving parts in production.
+
+usage_doc = {
+    "user_id": clerk_user_id,
+    "date": today,           # TTL index on this field
+    "comics_generated": 3,   # Checked before every pipeline run
+}
+```
+
+```javascript
+// Why Clerk over NextAuth / custom JWT?
+// → Clerk handles edge cases: session rotation, device management,
+//   OAuth token refresh — things that take weeks to get right manually.
+// → Middleware protection on all /api routes with 3 lines of config.
+```
+
+<br/>
+
+## 🔐 Security & Abuse Prevention
+
+- **Rate Limiting**: 5 comics/day/user enforced at the FastAPI layer — before any model is called. Prevents API cost blowouts.
+- **Auth on Every Route**: Clerk middleware validates JWT on all backend endpoints. No anonymous access to the pipeline.
+- **Input Sanitization**: User-provided parameters are validated before being passed to any LLM prompt.
+
+<br/>
+
+## 🚀 Local Setup
+
+### Backend
 
 ```bash
-cd Backend
+git clone https://github.com/YOUR_GITHUB_USERNAME/DailySatire
+cd DailySatire/Backend
+
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn api:app --reload
 ```
 
-🔗 Runs on: `http://127.0.0.1:8000`
+Create `.env`:
+```env
+GEMINI_API_KEY=your_gemini_key
+HUGGINGFACE_API_KEY=your_hf_key
+MONGODB_URI=your_mongodb_uri
+```
 
----
+```bash
+uvicorn api:app --reload
+# → http://127.0.0.1:8000
+# → http://127.0.0.1:8000/docs  (Swagger UI)
+```
 
-## 💻 Frontend Setup (Next.js)
+### Frontend
 
 ```bash
 cd Frontend/comic-frontend
 npm install
-npm run dev
 ```
 
-🌐 Runs on: `http://localhost:3000`
-
----
-
-## 🔄 How It Works
-
-```mermaid
-graph TD;
-    A[🌍 Fetch News] --> B[🧠 Story Generator Agent]
-    B --> C[🎨 Image Generator Agent]
-    C --> D[🧵 Comic Assembler]
-    D --> E[📺 Frontend Display]
+Create `.env.local`:
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
+CLERK_SECRET_KEY=sk_...
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 ```
-
----
-
-## 🔐 Environment Variables
-
-### Backend `.env`
-
-```
-OPENAI_API_KEY=your_key_here
-OTHER_API_KEYS=...
-```
-
-### Frontend `.env.local`
-
-```
-NEXT_PUBLIC_API_URL=http://localhost:8000
-```
-
----
-
-## 📸 Demo Flow
-
-1. User opens frontend
-2. Clicks generate comic
-3. Backend agents activate
-4. Comic is generated and displayed
-
----
-
-## 🤝 Contributing
-
-We love contributions ❤️
 
 ```bash
-# Fork the repo
-# Create your feature branch
-git checkout -b feature/amazing-feature
-
-# Commit changes
-git commit -m "Add amazing feature"
-
-# Push
-git push origin feature/amazing-feature
+npm run dev
+# → http://localhost:3000
 ```
 
-Then open a Pull Request 🚀
+<br/>
+
+## 🗂️ Project Structure
+
+```
+DailySatire/
+│
+├── Backend/
+│   ├── api.py                  # FastAPI app + route definitions
+│   ├── agents/
+│   │   ├── scout.py            # News fetching agent
+│   │   ├── editor.py           # Gemini satire generation agent
+│   │   ├── illustrator.py      # Hugging Face image generation agent
+│   │   └── publisher.py        # Comic compositing agent
+│   ├── utils/
+│   │   ├── image_utils.py      # PIL processing, text overlay
+│   │   └── rate_limiter.py     # MongoDB usage tracking
+│   ├── output/                 # Generated comic cache
+│   └── requirements.txt
+│
+└── Frontend/
+    └── comic-frontend/
+        ├── app/
+        │   ├── page.tsx         # Landing + generator UI
+        │   └── api/             # Next.js API routes
+        ├── components/
+        │   ├── Antigravity.tsx  # Custom particle background
+        │   └── ComicCard.tsx    # Comic display component
+        ├── middleware.ts        # Clerk auth protection
+        └── package.json
+```
+
+<br/>
+
+## 🔭 Roadmap
+
+| Feature | Status |
+|---|---|
+| 🖼️ User comic gallery & history dashboard | Planned |
+| 🎨 Upgraded models (FLUX / Animagine XL) | Planned |
+| 🔊 Voice narration via ElevenLabs | Planned |
+| 📱 Full mobile responsiveness | In Progress |
+| ⚡ Streaming responses for faster perceived UX | Planned |
+| 🌐 Multi-language satire (Tamil, Bengali, Marathi) | Exploring |
+
+<br/>
+
+## 💡 What I Learned
+
+Building this taught me things that no tutorial covers:
+
+- **Agentic pipelines fail differently** than single-model calls — you need error boundaries at every handoff, not just at the API layer
+- **Prompt engineering for style consistency** across agents (the Editor's tone must inform the Illustrator's visual prompt)
+- **Cost management** is a real engineering constraint — rate limiting isn't just a feature, it's what keeps a project alive
+- **Diffusion model prompt craft** is its own discipline — comic-style image generation needs very different prompts than photorealism
+
+<br/>
 
 ---
 
-## 🧠 Tech Stack
+<div align="center">
 
-* ⚡ FastAPI
-* ⚛️ Next.js
-* 🎨 React + TypeScript
-* 🤖 OpenAI / GenAI APIs
-* 🧩 Agent-based architecture
+**Built by [Saksham Sharma](https://github.com/YOUR_GITHUB_USERNAME)**
 
----
+*Building at the intersection of AI + Creativity*
 
-## 📜 License
+<br/>
 
-📝 MIT License — feel free to use, modify, and build on top of this.
+If this project sparked something — ⭐ star it, 🍴 fork it, or just say hi.
 
----
-
-## 🙌 Acknowledgements
-
-* FastAPI ⚡
-* Next.js 🚀
-* React ⚛️
-* OpenAI 🤖
-
----
-
-## 💡 Future Improvements
-
-* 🎥 Animated comics
-* 🗣️ Voice narration
-* 📱 Mobile optimization
-* 🧠 Smarter agent chaining
-
----
-
-<p align="center">
-  <b>Built with ❤️ by developers who love AI + Creativity</b>
-</p>
-
----
-
-If you want next-level upgrade (like **preview GIFs, dark theme banner, or portfolio-grade README**), tell me — I’ll make it 🔥
+</div>
