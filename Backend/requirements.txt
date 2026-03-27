@@ -7,3 +7,4 @@ pillow
 requests
 google-genai
 feedparser
+huggingface_hub
