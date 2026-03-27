@@ -5,5 +5,5 @@ pymongo
 python-dotenv
 pillow
 requests
-google-generativeai
+google-genai
 feedparser
