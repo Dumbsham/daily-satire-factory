@@ -1,0 +1,13 @@
+# Node & Next.js
+node_modules/
+.next/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Secrets & Databases
+.env
+.env.local
+usage_ledger.db

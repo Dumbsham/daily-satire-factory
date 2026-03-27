@@ -1,0 +1,8 @@
+python-dotenv
+google-genai
+feedparser
+diffusers
+transformers
+accelerate
+torch
+Pillow
