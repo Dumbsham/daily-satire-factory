@@ -88,7 +88,7 @@ This is a **true multi-agent orchestration system** — four specialized AI agen
 | **LLM (Satire)** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white) | State-of-the-art language model for Hinglish generation |
 | **Image Gen** | ![Hugging Face](https://img.shields.io/badge/Hugging_Face_Diffusion-FFD21E?style=flat-square&logo=huggingface&logoColor=black) | Open-source diffusion models for comic-style art |
 | **Database** | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) | Flexible document store for usage tracking + history |
-| **Deployment** | Cloud-hosted backend + Vercel frontend | CI/CD ready, scalable |
+
 
 </div>
 
