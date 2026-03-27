@@ -1,203 +1,157 @@
-Here’s a **clean, aesthetic, “wow” GitHub README** with badges, emojis, structure, and a professional vibe 👇
+# 🚀 DailySatire.ai
 
----
-
-# 🚀 DailySatire.AI
-
-### 🧠 Agentic AI Comic & Story Generator
+### 🧠 An Autonomous Agentic AI Comic Factory
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AI-Agentic-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Next.js-Frontend-black?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/TypeScript-React-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Gemini-Powered-orange?style=for-the-badge" />
+<a href="YOUR_LIVE_LINK_HERE" target="_blank">
+<img src="https://img.shields.io/badge/🔴_Live_Demo-Click_Here-FF5722?style=for-the-badge" alt="Live Demo" />
+</a>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Next.js_16-Black?style=for-the-badge&logo=next.js&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Clerk_Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" />
+<img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
 </p>
 
 ---
 
 ## ✨ Overview
 
-**COMIC-AI** is a full-stack, agent-driven AI application that transforms **real-world news into engaging comic stories** using intelligent agents, text generation, and image synthesis.
+**DailySatire.ai** is a full-stack, multi-agent AI application that autonomously transforms **live Indian political news into single-panel Hinglish comic strips**.
 
-> ⚡ From breaking news → story → panels → comic
-> All automated using AI agents.
+Instead of a single AI prompt, this project utilizes an **Agentic Architecture** where four specialized AI personas (The Scout, The Editor, The Illustrator, and The Publisher) hand off data to one another in a seamless, automated pipeline.
+
+> 📰 **Breaking News** → 📝 **Hinglish Satire** → 🎨 **Image Generation** → 🖼️ **Final Comic**
 
 ---
 
-## 🧩 Features
+## 🧩 Key Features
 
-🔥 **Agentic Architecture**
+🔥 **Multi-Agent Pipeline**
 
-* Multi-agent pipeline (News → Story → Image → Comic)
+- **The Scout:** Scours the web for the top trending political headlines.  
+- **The Editor:** Uses Google Gemini to write biting, culturally relevant Hinglish satire.  
+- **The Illustrator:** Calls Hugging Face's open-source models to generate caricature art.  
+- **The Publisher:** Uses Python imaging libraries to stitch the text and image into a final comic strip.
 
-📰 **Live News Processing**
+🔐 **Production-Ready Security**
 
-* Fetches trending/global news dynamically
+- Fully integrated with **Clerk** for seamless user authentication (Google & Email).  
+- Secure API routes protecting the generative models.
 
-🎭 **Story Generation**
+📊 **Smart Rate Limiting**
 
-* Converts news into engaging narratives
+- **MongoDB** integration tracks daily usage per user.  
+- Enforces a strict 5-comics-per-day limit to prevent API abuse and manage free-tier limits.
 
-🎨 **AI Image Generation**
+✨ **Stunning UI/UX**
 
-* Creates comic-style visuals for each panel
+- Built on Next.js 16 with Turbopack.  
+- Glassmorphism design system with fluid **Framer Motion** loading states and an interactive `<Antigravity />` particle background.
 
-🧵 **Comic Stitching**
+---
 
-* Automatically assembles panels into a final comic
+## 🔄 The Agentic Flow
 
-🌐 **Full Stack App**
-
-* FastAPI backend + Next.js frontend
+```mermaid
+graph TD;
+    A[🧑 User Clicks Generate] -->|Clerk Auth ID| B(FastAPI Backend)
+    B -->|Check Rate Limit| C[(MongoDB Ledger)]
+    C -->|Approved| D[🕵️ The Scout: Fetches News]
+    D --> E[✍️ The Editor: Gemini Writes Script]
+    E --> F[🎨 The Illustrator: Hugging Face Draws]
+    F --> G[🖨️ The Publisher: Assembles Image]
+    G --> H[🖼️ Returns Final Comic to Next.js]
+```
 
 ---
 
 ## 🏗️ Project Structure
 
+This is a Monorepo containing both the React frontend and the Python backend.
+
 ```bash
-COMIC-AI/
+DailySatire/
 │
-├── 🔧 Backend/
-│   ├── api.py
-│   ├── main.py
-│   ├── requirements.txt
-│   ├── agents/        # 🧠 AI agents
-│   ├── utils/         # ⚙️ Helper functions
-│   └── output/        # 🖼️ Generated comics
+├── 🔧 Backend/              # Python FastAPI Server
+│   ├── api.py               # Main API routes & Rate Limiter
+│   ├── agents/              # The AI Personas (Scout, Editor, etc.)
+│   ├── utils/               # Image generation & assembly logic
+│   ├── output/              # Temporary storage for generated panels
+│   └── requirements.txt
 │
-└── 🎨 Frontend/
+└── 🎨 Frontend/             # Next.js Web App
     └── comic-frontend/
-        ├── app/           # Pages & routing
-        ├── components/    # UI components
-        ├── lib/           # Utilities
-        ├── models/        # DB models
-        ├── public/        # Assets
+        ├── app/             # App Router pages & Layout
+        ├── components/      # UI, Navbar, and ComicGenerator widget
+        ├── middleware.ts    # Clerk Auth protection
         └── package.json
 ```
 
 ---
 
-## ⚙️ Backend Setup (FastAPI)
+## 🚀 Local Development Setup
+
+### 1. Backend Setup (Python / FastAPI)
 
 ```bash
 cd Backend
+python -m venv venv
+source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn api:app --reload
 ```
 
-🔗 Runs on: `http://127.0.0.1:8000`
+Create a `.env` file in the `Backend` folder:
 
----
+```env
+GEMINI_API_KEY="your_gemini_key"
+HUGGINGFACE_API_KEY="your_hf_key"
+MONGODB_URI="mongodb+srv://..."
+```
 
-## 💻 Frontend Setup (Next.js)
+Run the server:
+
+```bash
+uvicorn api:app --reload
+# 🔗 Runs on: http://127.0.0.1:8000
+```
+
+### 2. Frontend Setup (Next.js)
 
 ```bash
 cd Frontend/comic-frontend
 npm install
-npm run dev
 ```
 
-🌐 Runs on: `http://localhost:3000`
+Create a `.env.local` file in the `comic-frontend` folder:
 
----
-
-## 🔄 How It Works
-
-```mermaid
-graph TD;
-    A[🌍 Fetch News] --> B[🧠 Story Generator Agent]
-    B --> C[🎨 Image Generator Agent]
-    C --> D[🧵 Comic Assembler]
-    D --> E[📺 Frontend Display]
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="pk_test_..."
+CLERK_SECRET_KEY="sk_test_..."
+NEXT_PUBLIC_API_URL="http://127.0.0.1:8000"
 ```
 
----
-
-## 🔐 Environment Variables
-
-### Backend `.env`
-
-```
-OPENAI_API_KEY=your_key_here
-OTHER_API_KEYS=...
-```
-
-### Frontend `.env.local`
-
-```
-NEXT_PUBLIC_API_URL=http://localhost:8000
-```
-
----
-
-## 📸 Demo Flow
-
-1. User opens frontend
-2. Clicks generate comic
-3. Backend agents activate
-4. Comic is generated and displayed
-
----
-
-## 🤝 Contributing
-
-We love contributions ❤️
+Run the frontend:
 
 ```bash
-# Fork the repo
-# Create your feature branch
-git checkout -b feature/amazing-feature
-
-# Commit changes
-git commit -m "Add amazing feature"
-
-# Push
-git push origin feature/amazing-feature
+npm run dev
+# 🌐 Runs on: http://localhost:3000
 ```
-
-Then open a Pull Request 🚀
-
----
-
-## 🧠 Tech Stack
-
-* ⚡ FastAPI
-* ⚛️ Next.js
-* 🎨 React + TypeScript
-* 🤖 OpenAI / GenAI APIs
-* 🧩 Agent-based architecture
-
----
-
-## 📜 License
-
-📝 MIT License — feel free to use, modify, and build on top of this.
-
----
-
-## 🙌 Acknowledgements
-
-* FastAPI ⚡
-* Next.js 🚀
-* React ⚛️
-* OpenAI 🤖
 
 ---
 
 ## 💡 Future Improvements
 
-* 🎥 Animated comics
-* 🗣️ Voice narration
-* 📱 Mobile optimization
-* 🧠 Smarter agent chaining
+- [ ] **My Gallery:** A personalized dashboard to view previously generated comics.  
+- [ ] **Model Upgrades:** Swap the Hugging Face base model to FLUX.1 or Animagine XL for cinematic art styles.  
+- [ ] **Voice Narration:** Add an ElevenLabs agent to read the Hinglish punchlines out loud.
 
 ---
 
 <p align="center">
-  <b>Built with ❤️ by developers who love AI + Creativity</b>
+<b>Built with ❤️ by <a href="https://github.com/YOUR_GITHUB_USERNAME">Saksham Sharma</a></b><br>
+<i>"AI + Creativity"</i>
 </p>
-
----
-
-If you want next-level upgrade (like **preview GIFs, dark theme banner, or portfolio-grade README**), tell me — I’ll make it 🔥
