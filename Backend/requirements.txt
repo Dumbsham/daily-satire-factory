@@ -1,8 +1,8 @@
+fastapi
+uvicorn
+pydantic
+pymongo
 python-dotenv
-google-genai
-feedparser
-diffusers
-transformers
-accelerate
-torch
-Pillow
+pillow
+requests
+google-generativeai
