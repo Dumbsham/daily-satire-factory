@@ -6,3 +6,4 @@ python-dotenv
 pillow
 requests
 google-generativeai
+feedparser
